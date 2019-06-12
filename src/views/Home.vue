@@ -19,6 +19,8 @@
           unique-opened
           :collapse="menushow"
           :collapse-transition="false"
+          :default-active="$route.path"
+          router
         >
           <el-submenu
             v-for="item in menuList"
@@ -31,7 +33,7 @@
               <span>{{ item.authName }}</span>
             </template>
             <el-menu-item
-              index="1-1"
+              :index="'/' + item2.path"
               v-for="item2 in item.children"
               :key="item2.id"
             >
@@ -39,14 +41,6 @@
               <span>{{ item2.authName }}</span>
             </el-menu-item>
           </el-submenu>
-          <!-- <el-submenu index="2" :style="{ width: menushow ? '65px' : '200px' }">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>导航二</span>
-            </template>
-            <el-menu-item index="2-1">选项3</el-menu-item>
-            <el-menu-item index="2-2">选项4</el-menu-item>
-          </el-submenu> -->
         </el-menu>
       </el-aside>
       <el-main>
