@@ -6,10 +6,13 @@ import Welcome from "./views/Welcome.vue";
 import User from "./views/users/User.vue";
 import Rights from "./views/auth/Rights.vue";
 import Roles from "./views/auth/Roles.vue";
+
 import Categories from "./views/goods/Categories.vue";
 import Params from "./views/goods/Params.vue";
 import Goods from "./views/goods/Goods.vue";
 import GoodsAdd from "./views/goods/GoodsAdd.vue";
+
+
 Vue.use(Router);
 
 var router = new Router({
@@ -26,11 +29,15 @@ var router = new Router({
         { path: "/welcome", component: Welcome },
         { path: "/users", component: User },
         { path: "/rights", component: Rights },
+
         { path: "/roles", component: Roles },
         { path: "/categories", component: Categories },
         { path: "/params", component: Params },
         { path: "/goods", component: Goods },
         { path: "/goods/add", component: GoodsAdd },
+
+        { path: "/roles", component: Roles }
+
       ]
     }
   ]
