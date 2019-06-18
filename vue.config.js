@@ -5,4 +5,12 @@ module.exports = {
   //   open: true, // 自动打开浏览器
   //   port: 12306 // http服务的端口号码设定
   // }
+  configureWebpack: {
+    externals: {
+      "element-ui": "ELMENT",
+      echarts: "echarts",
+      vue: "Vue"
+    }
+  }
 };
+

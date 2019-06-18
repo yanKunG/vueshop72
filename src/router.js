@@ -1,19 +1,31 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Login from "./views/Login.vue";
-import Home from "./views/Home.vue";
-import Welcome from "./views/Welcome.vue";
-import User from "./views/users/User.vue";
-import Rights from "./views/auth/Rights.vue";
-import Roles from "./views/auth/Roles.vue";
+// import Login from "./views/Login.vue";
+// import Home from "./views/Home.vue";
+// import Welcome from "./views/Welcome.vue";
+// import User from "./views/users/User.vue";
+// import Rights from "./views/auth/Rights.vue";
+// import Roles from "./views/auth/Roles.vue";
+// import Categories from "./views/goods/Categories.vue";
+// import Params from "./views/goods/Params.vue";
+// import Goods from "./views/goods/Goods.vue";
+// import GoodsAdd from "./views/goods/GoodsAdd.vue";
+// import Orders from "./views/order/orders.vue";
+// import Report from "./views/report/reports.vue";
 
-import Categories from "./views/goods/Categories.vue";
-import Params from "./views/goods/Params.vue";
-import Goods from "./views/goods/Goods.vue";
-import GoodsAdd from "./views/goods/GoodsAdd.vue";
-import Orders from "./views/order/orders.vue";
-import Report from "./views/report/reports.vue";
-
+// const Foo = () => import('./Foo.vue')
+const Login = () => import("./views/Login.vue");
+const Home = () => import("./views/Home.vue");
+const Welcome = () => import("./views/Welcome.vue");
+const User = () => import("./views/users/User.vue");
+const Rights = () => import("./views/auth/Rights.vue");
+const Roles = () => import("./views/auth/Roles.vue");
+const Categories = () => import("./views/goods/Categories.vue");
+const Params = () => import("./views/goods/Params.vue");
+const Goods = () => import("./views/goods/Goods.vue");
+const GoodsAdd = () => import("./views/goods/GoodsAdd.vue");
+const Orders = () => import("./views/order/orders.vue");
+const Report = () => import("./views/report/reports.vue");
 
 Vue.use(Router);
 
@@ -39,8 +51,7 @@ var router = new Router({
         { path: "/goods/add", component: GoodsAdd },
         { path: "/roles", component: Roles },
         { path: "/orders", component: Orders },
-        { path: "/reports", component: Report },
-
+        { path: "/reports", component: Report }
       ]
     }
   ]
